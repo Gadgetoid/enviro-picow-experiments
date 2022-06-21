@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"></head>
+<body><h1>Hello World</h1>
+<h2>{name} {machine} {uid}</h2>
+<h3>Mode: {mode}</h3>
+<form method="POST" action="/connect">
+<fieldset>
+<legend>Board Details</legend>
+<label for="uid">UID: <input type="text" disabled value="{uid}" />
+<label for="type">Type: <select name="type" id="type">
+<option value="indoor">Enviro Indoor</option>
+<option value="weather">Enviro Weather</option>
+<option value="camera">Enviro Camera</option>
+</select></label>
+<label for="name">Nickname: <input type="text" name="name" id="name" /></label>
+</fieldset>
+<fieldset>
+<label for="service">Service: <select name="service" id="service">
+<option value="none">None (I'll pick later)</option>
+<option vlaue="frame">Inky Frame</option>
+<option value="adafruitio">Adafruit IO</option>
+<option value="mqtt">MQTT</option>
+<option value="webhook">Webhook</option>
+</select></label>
+</fieldset>
+<fieldset>
+<legend>WiFi Network</legend>
+<label for="networks"l>Network: <select name="networks" id="networks"></select></label>
+<label for="psk">Password: <input type="text" name="psk" id="psk" /></label>
+</fieldset>
+<input type="submit" text="Finish" />
+</form>
+<ul>
+<li><a href="/client">Switch to client mode</a>
+<li><a href="/ap">Switch to ap mode</a>
+</ul>
+
+<script src="js/app.js"></script>
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>
